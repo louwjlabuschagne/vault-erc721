@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "vault-721",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
@@ -24,5 +24,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0"
+  },
+  "scripts": {
+    "test": "npx hardhat test",
+    "prettier": "npx prettier '**/*.{json,sol,md}' --write",
+    "compile": "npx hardhat compile",
+    "clean": "npx hardhat clean"
   }
 }

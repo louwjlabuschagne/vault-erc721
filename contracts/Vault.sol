@@ -14,12 +14,7 @@ import "@openzeppelin/contracts/utils/introspection/ERC165.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "./IVault.sol";
 
-contract Vault is
-    Context,
-    ERC165,
-    ERC721,
-    IVault
-{
+contract Vault is Context, ERC165, ERC721, IVault {
     string internal constant _name = "NAME";
     string internal constant _symbol = "SCV";
     string private _baseTokenURI = "https://";
@@ -55,6 +50,7 @@ contract Vault is
     constructor() ERC721(_name, _symbol) {}
 
     modifier onlyVaultOwner(uint256 _vaultId) {
+        require(_exists(_vaultId), "Vault: Vault doesn't exists");
         require(ownerOf(_vaultId) == _msgSender(), "Vault: Only vault owner");
         _;
     }
@@ -70,44 +66,41 @@ contract Vault is
         safeMint(_to, _uri);
 
         // events
-        emit VaultCreated(vaultId, _to, msg.sender, _uri);
+        emit VaultCreated(vaultId, _to, _msgSender(), _uri);
     }
 
     function add(
         uint256 _vaultId,
         address _tokenAddress,
         uint256 _tokenId
-    ) public {
+    ) public onlyVaultOwner(_vaultId) {
         // Checks
-        require(
-            _tokenAddress != address(0),
-            "Vault: _tokenAddress cannot be 0"
-        );
-        require(
-            _tokenAddress != address(this),
-            "Vault: _tokenAddress cannot be this contract"
-        );
-        require(
-            IERC165(_tokenAddress).supportsInterface(type(IERC165).interfaceId),
-            "Vault: _tokenAddress does not support ERC165"
-        );
-        require(
-            IERC165(_tokenAddress).supportsInterface(type(IERC721).interfaceId),
-            "Vault: _tokenAddress does not support ERC721"
-        );
-
-        IERC721 erc721 = IERC721(_tokenAddress);
-        address tokenOwner = erc721.ownerOf(_tokenId);
-        require(
-            erc721.isApprovedForAll(tokenOwner, address(this)),
-            "Vault: Vault NFT isn't approved for _tokenAddress"
-        );
-
-        require(_exists(_vaultId), "Vault: Vault does not exist");
+        // Vault checks
         require(
             _state[_vaultId] == VaultState.OPEN,
             "Vault: Vault is not open"
         );
+
+        // _tokenAddress checks
+        require(_tokenAddress != address(0), "Vault: _tokenAddress can't be 0");
+        require(
+            _tokenAddress != address(this),
+            "Vault: _tokenAddress can't be vault"
+        );
+        require(
+            IERC165(_tokenAddress).supportsInterface(type(IERC165).interfaceId),
+            "Vault: _tokenAddress not IERC165"
+        );
+        require(
+            IERC165(_tokenAddress).supportsInterface(type(IERC721).interfaceId),
+            "Vault: _tokenAddress not IERC721"
+        );
+        
+        IERC721 erc721 = IERC721(_tokenAddress);
+        address tokenOwner = erc721.ownerOf(_tokenId);
+        bool approved = erc721.isApprovedForAll(tokenOwner, address(this)) ||
+            (erc721.getApproved(_tokenId) == address(this));
+        require(approved, "Vault: not approved");
 
         // Effects
         uint256 nrTokens = _tokens[_vaultId].length;
@@ -123,7 +116,7 @@ contract Vault is
         emit TokenAdded(
             _vaultId,
             ownerOf(_vaultId),
-            msg.sender,
+            _msgSender(),
             _tokenId,
             _tokenAddress
         );
@@ -135,7 +128,6 @@ contract Vault is
         uint256 _tokenId
     ) public onlyVaultOwner(_vaultId) {
         // Checks
-        require(_exists(_vaultId), "Vault: Vault does not exist");
         require(
             _state[_vaultId] == VaultState.OPEN,
             "Vault: Vault is not open"
@@ -175,7 +167,7 @@ contract Vault is
         );
     }
 
-    function destroy(uint256 _vaultId) public {
+    function destroy(uint256 _vaultId) public onlyVaultOwner(_vaultId) {
         // Checks
         require(
             _state[_vaultId] == VaultState.CLOSED,
@@ -220,7 +212,6 @@ contract Vault is
 
     function close(uint256 _vaultId) public onlyVaultOwner(_vaultId) {
         // Checks
-        require(_exists(_vaultId), "Vault: Vault does not exist");
         require(
             _state[_vaultId] == VaultState.OPEN,
             "Vault: Vault is not open"
@@ -237,7 +228,6 @@ contract Vault is
 
     function open(uint256 _vaultId) public onlyVaultOwner(_vaultId) {
         // Checks
-        require(_exists(_vaultId), "Vault: Vault does not exist");
         require(
             _state[_vaultId] == VaultState.CLOSED,
             "Vault: Vault was not closed"
@@ -280,10 +270,7 @@ contract Vault is
         address to,
         uint256 tokenId
     ) internal override(ERC721) {
-        require(
-            isAllVaultsClosed(from),
-            "Vault._transfer: All vaults not closed"
-        );
+        require(isAllVaultsClosed(from), "Vault: All vaults not closed");
 
         // remove vault from vault owners list
         bool found = false;
@@ -329,7 +316,7 @@ contract Vault is
     {
         require(
             _state[tokenId] == VaultState.CLOSED,
-            "Vault.approve: vault not closed"
+            "Vault: vault not closed"
         );
 
         super.approve(to, tokenId);
@@ -358,7 +345,7 @@ contract Vault is
     {
         require(
             isAllVaultsClosed(_msgSender()),
-            "Vault.setApprovalForAll: All vaults not closed"
+            "Vault: All vaults not closed"
         );
         super.setApprovalForAll(operator, approved);
     }
@@ -400,14 +387,6 @@ contract Vault is
         return this.onERC721Received.selector;
     }
 
-    function vaultOpenCoolDown(uint256 _vaultId)
-        external
-        view
-        returns (uint256)
-    {
-        return _vaultOpenBlock[_vaultId];
-    }
-
     function vaults(address _owner) external view returns (uint256[] memory) {
         return _vaults[_owner];
     }
@@ -431,7 +410,6 @@ contract Vault is
     function updateContractURI(string memory uri) public {
         _contractURI = uri;
     }
-
 
     function tokenURI(uint256 tokenId)
         public

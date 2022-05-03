@@ -17,8 +17,7 @@ describe("Create", () => {
   beforeEach(async () => {
     [owner, notOwner, vaultOwner] = await ethers.getSigners();
     const Vault = await ethers.getContractFactory("Vault");
-    vault = await Vault.deploy();
-    await vault.deployed();
+    vault = await (await Vault.deploy()).deployed();
   });
 
   it("can create vault", async () => {

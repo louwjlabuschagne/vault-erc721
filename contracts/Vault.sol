@@ -95,7 +95,7 @@ contract Vault is Context, ERC165, ERC721, IVault {
             IERC165(_tokenAddress).supportsInterface(type(IERC721).interfaceId),
             "Vault: _tokenAddress not IERC721"
         );
-        
+
         IERC721 erc721 = IERC721(_tokenAddress);
         address tokenOwner = erc721.ownerOf(_tokenId);
         bool approved = erc721.isApprovedForAll(tokenOwner, address(this)) ||

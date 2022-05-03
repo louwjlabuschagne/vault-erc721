@@ -61,7 +61,7 @@ contract Vault is
 
     function create(address _to, string memory _uri) public {
         // effects
-        uint256 vaultId = curVaultId();
+        uint256 vaultId = tokenIdCounter();
         _state[vaultId] = VaultState.OPEN;
         _vaults[_to].push(vaultId);
         _vaultOpenBlock[vaultId] = block.timestamp;
@@ -420,7 +420,7 @@ contract Vault is
         return _tokens[_vaultId];
     }
 
-    function curVaultId() public view returns (uint256) {
+    function tokenIdCounter() public view returns (uint256) {
         return _tokenIdCounter.current();
     }
 

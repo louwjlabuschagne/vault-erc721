@@ -1,0 +1,175 @@
+<mxfile host="65bd71144e">
+    <diagram id="tqhDawjbUlvsPHccXCzJ" name="Page-1">
+        <mxGraphModel dx="1984" dy="1098" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="38" value="&lt;b&gt;Scene 3&lt;br&gt;&lt;/b&gt;&lt;br&gt;The owner of the vault can now add items to their vault - provided that the vault is OPEN. Adding tokens to a vault entails the current owner of a token to transfer the token to the Vault's address, i.e. 0xVault." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontFamily=Courier New;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="730" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;b&gt;Vault ERC721&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;0xVault&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="810" width="274" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="tokenV1 - OPEN" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="980" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;b&gt;Scene 2&lt;br&gt;&lt;/b&gt;&lt;br&gt;Vault token created by arbitrary wallet which mints a ERC721 complient token to a _to address. This created &quot;vault&quot; token will serve as the vault and is minted in an open state." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontFamily=Courier New;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="370" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;b&gt;Vault ERC721&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;0xVault&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="450" width="274" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;b&gt;Scene 1&lt;br&gt;&lt;/b&gt;&lt;br&gt;Empty Vault and 2 deployed NFT contracts (A and B) each with 3 tokens" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontFamily=Courier New;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="10" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;b&gt;Vault ERC721&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;0xVault&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="90" width="274" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;A ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721a&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="90" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="tokenA3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="140" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="tokenA2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="140" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="tokenA1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="140" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;b&gt;B ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721b&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="230" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="tokenB3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="280" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="tokenB2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="280" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="tokenB1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="280" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;b&gt;A ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721a&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="450" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="tokenA3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="500" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="tokenA2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="500" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="tokenA1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="500" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;b&gt;B ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721b&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="590" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="tokenB3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="640" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="tokenB2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="640" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="tokenB1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="640" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="tokenV1 - OPEN" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="620" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;b&gt;A ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721a&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="810" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="tokenA3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="860" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="tokenA2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="860" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="tokenA1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1000" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;B ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721b&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="950" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="tokenB3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="1000" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="tokenB1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1000" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="tokenB2" style="rounded=0;whiteSpace=wrap;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1000" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;b&gt;Scene 4&lt;br&gt;&lt;/b&gt;&lt;br&gt;The vault can then be closed to enable it to be transferred to another owner. This will enable the new owner of the vault token to open the vault and remove the tokens." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontFamily=Courier New;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="1090" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="&lt;b&gt;Vault ERC721&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;0xVault&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="1170" width="274" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="tokenV1 - CLOSED" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1340" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;b&gt;A ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721a&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1170" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="tokenA3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="1220" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="tokenA2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="1220" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="tokenA1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1360" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="&lt;b&gt;B ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721b&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1310" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="tokenB3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="1360" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="tokenB1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1360" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="tokenB2" style="rounded=0;whiteSpace=wrap;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1360" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;Scene 5&lt;br&gt;&lt;/b&gt;&lt;br&gt;Closed vaults can then be listed and traded as normal NFTs, granting the current owner of a specific vault token the ability to&amp;nbsp;remove any of the tokens that are inside a vault." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontFamily=Courier New;align=left;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="1450" width="580" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;Vault ERC721&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;0xVault&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="1530" width="274" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="tokenV1 - CLOSED" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1700" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;b&gt;A ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721a&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1530" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="tokenA1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1720" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;b&gt;B ERC721&lt;/b&gt;&lt;br&gt;&lt;i&gt;0xErc721b&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1670" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="tokenB1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="1720" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="tokenB2" style="rounded=0;whiteSpace=wrap;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="1720" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="tokenV2 - CLOSED" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#ffe6cc;strokeColor=#d79b00;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="152" y="1610" width="250" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="tokenA3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="212" y="1630" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="tokenA2" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="152" y="1630" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="tokenB3" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="272" y="1630" width="60" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
